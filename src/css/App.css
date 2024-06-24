@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .formInput {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white;
+  }
+
+  .formLabel {
+    @apply block mb-2 text-sm font-medium text-gray-900 dark:text-white;
+  }
+
+  .blueButton {
+    @apply w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center;
+  }
+
+  .redButton {
+    @apply w-full text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center;
+  }
+
+  .link {
+    @apply text-blue-700 hover:underline hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-400;
+  }
+
+  .icon {
+    @apply hover:cursor-pointer w-10 h-10 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-800 dark:hover:text-white;
+  }
+
+  .topRight {
+    @apply absolute top-3 right-2.5;
+  }
+
+  .page {
+    @apply p-1.5 lg:p-2 top-[0em] w-full flex flex-col items-center gap-2 text-gray-900 dark:text-white flex-grow;
+  }
+
+  .body {
+    @apply bg-slate-300 dark:bg-slate-800 min-h-screen flex flex-col;
+  }
+
+  .disabled {
+    @apply grayscale;
+  }
+
+  .required {
+    @apply after:content-['*'] after:opacity-50;
+  }
+
+  .banner {
+    @apply bg-black bg-opacity-10 text-white p-4 rounded-lg;
+  }
+
+  .cartItem {
+    @apply bg-white text-gray-700 text-center p-2.5 w-full rounded-md items-center flex;
+  }
+}
+
+/* Additional global styles for custom elements */
+.dark [type="checkbox"]:checked {
+  background-color: currentColor;
+}
+.main-content {
+    min-height: calc(100vh - 64px); /* Adjust 64px based on your navbar and any other padding/margin */
+    display: flex;
+    flex-direction: column;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.h-page {
+  height: calc(100% - 3em);
+}
